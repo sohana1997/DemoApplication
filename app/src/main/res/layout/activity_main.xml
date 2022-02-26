@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".MainActivity">
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/name_text_pan"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/name_edit_pan"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:hint="Pan number"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="209dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+   <LinearLayout
+       android:id="@+id/date"
+       android:layout_width="match_parent"
+       android:layout_below="@id/name_text_pan"
+       android:orientation="horizontal"
+       android:gravity="center"
+       android:layout_height="100dp">
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/name_text_dobDate"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/name_edit_dob"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:hint="dd"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLength="2"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="209dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+       <com.google.android.material.textfield.TextInputLayout
+           style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+           android:layout_width="100dp"
+           android:layout_marginStart="10dp"
+           android:layout_height="wrap_content">
+           <com.google.android.material.textfield.TextInputEditText
+               android:id="@+id/name_edit_month"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:hint="mm"
+               android:gravity="center"
+               android:inputType="number"
+               android:maxLength="2"
+               app:layout_constraintStart_toStartOf="parent"
+               tools:layout_editor_absoluteY="209dp" />
+
+       </com.google.android.material.textfield.TextInputLayout>
+
+       <com.google.android.material.textfield.TextInputLayout
+           style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+           <com.google.android.material.textfield.TextInputEditText
+               android:id="@+id/name_edit_year"
+               android:layout_width="match_parent"
+               android:layout_height="60dp"
+               android:hint="yyyy"
+               android:gravity="center"
+               android:layout_marginStart="10dp"
+               android:inputType="number"
+               android:maxLength="4"
+               app:layout_constraintStart_toStartOf="parent"
+               tools:layout_editor_absoluteY="209dp" />
+
+       </com.google.android.material.textfield.TextInputLayout>
+
+
+   </LinearLayout>
+
+    <Button
+        android:layout_below="@id/date"
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:text="Next" />
+
+
+    <TextView
+        android:id="@+id/dontHavePan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="I don't have a pan"
+        android:layout_below="@+id/button"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:textColor="@color/purple_500"/>
+
+
+
+
+</RelativeLayout>
